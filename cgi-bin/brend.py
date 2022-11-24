@@ -21,14 +21,16 @@ template = '''
         </head>
         <body>
             <h1>Список продуктов:</h1>
-            <table>
+            <a class="h3 link-primary" href="/">На главную</a>
+            <br>
+            <table class="table w-100 mx-4">
                 <tr>
-
                     <th>Имя</th>
                     <th>Страна</th>                    
                 </tr>
                 {rows_html}
             </table>
+             <a class="h3 link-primary" href="/cgi-bin/get_brend_xml.py" download="brends.xml">Выгрузить XML</a>
         </body>
     </html>
 '''
@@ -36,8 +38,8 @@ template = '''
 rows_html = ""
 for dance in dances:
     rows_html += "<tr>"
-    rows_html += f"<td>{dance[0]}</td>"
     rows_html += f"<td>{dance[1]}</td>"
+    rows_html += f"<td>{dance[2]}</td>"
     rows_html += "</tr>"
 
 print("Content-Type: text/html\n")

@@ -21,7 +21,9 @@ template = '''
         </head>
         <body>
             <h1>Список продуктов:</h1>
-            <table>
+            <a class="h3 link-primary" href="/">На главную</a>
+            <br>
+            <table class="table w-100 mx-4">
                 <tr>
                     
                     <th>Имя</th>
@@ -39,10 +41,10 @@ template = '''
 rows_html = ""
 for dance in dances:
     rows_html += "<tr>"
-    rows_html += f"<td>{dance[0]}</td>"
     rows_html += f"<td>{dance[1]}</td>"
     rows_html += f"<td>{dance[2]}</td>"
     rows_html += f"<td>{dance[3]}</td>"
+    rows_html += f"<td>{dance[4]}</td>"
 
 
 
